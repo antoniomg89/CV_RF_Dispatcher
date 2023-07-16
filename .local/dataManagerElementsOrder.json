@@ -1,0 +1,453 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PathConfig&StateMachine_1",
+        "isSystemException&StateMachine_1",
+        "dtExceptions&StateMachine_1",
+        "retryProcess&StateMachine_1",
+        "vCase&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Case",
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "urlStatus&Sequence_2",
+        "dtExceptions&Sequence_2",
+        "dtVendors&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_2",
+        "dt_Assets&Sequence_4",
+        "AssetValue&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_pathConfig",
+        "out_Config",
+        "in_ConfigFile",
+        "in_ConfigSheets"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_8",
+        "ScreenshotPath&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "OpenBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_urlPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "username&Sequence_24",
+        "password&Sequence_24",
+        "urlStatus&Sequence_24"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_urlPathLogin",
+        "in_logPageError",
+        "in_queueFolder",
+        "in_logConnectionError",
+        "in_credential"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SendMail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "jobInfo&Sequence_1",
+        "processName&Sequence_1",
+        "processVersion&Sequence_1",
+        "workFlowName&Sequence_1",
+        "codeVendor&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_codeVendor",
+        "in_rowException",
+        "in_mail"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/GetTransactionDataTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PathConfig&Sequence_1",
+        "Config&Sequence_1",
+        "TransactionNumber&Sequence_1",
+        "TransactionItem&Sequence_1",
+        "VerificationOutput&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/InitAllApplicationsTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PathConfig&Sequence_1",
+        "Config&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DownloadVendorList.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "folderExists&Sequence_14",
+        "excelExists&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_logDownloadError",
+        "in_urlDownloadExcel",
+        "in_pathExcel",
+        "in_pathDownloadsExcel"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "AddColumnExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_pathExcelFinal",
+        "in_columnTotal",
+        "in_columnVendor"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ReadExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_logExcelAddColumnError",
+        "in_logExcelReadRangeError",
+        "in_pathExcelFinal",
+        "out_dtVendors"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FillQueue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "items&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_queueFolder",
+        "in_queueName",
+        "in_logStoredData",
+        "in_pathLogsDispatcher",
+        "in_dtVendors"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetException.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_rowException",
+        "in_dtExceptions",
+        "in_codeException"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/WorkflowTestCaseTemplate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PathConfig&Sequence_2",
+        "Config&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/InitAllSettingsTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PathConfig&Sequence_1",
+        "Config&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/ProcessTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PathConfig&Sequence_1",
+        "Config&Sequence_1",
+        "TransactionNumber&Sequence_1",
+        "TransactionItem&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_2",
+        "ScreenshotFileInfo&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/RetryCurrentTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_SystemException",
+        "in_QueueRetry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SaveLog.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "jobInfo&Sequence_1",
+        "folderExists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_pathLogsDispatcher",
+        "in_codeVendor",
+        "in_log"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LogOut.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "excelExists&Sequence_2",
+        "dtExceptions&Sequence_2",
+        "rowException&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ExceptionsHandler.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mail&Sequence_1",
+        "rowException&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_itemTransaction",
+        "io_retryProcess",
+        "in_isSystemException",
+        "in_logMessage",
+        "in_codeException",
+        "io_dtExceptions",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ReadFileExceptions.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dtExceptions",
+        "in_pathExcelExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetConnectionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_urlStatus",
+        "in_logConnectionError"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CheckIsLogged.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "urlStatus&Sequence_2",
+        "username&Sequence_3",
+        "password&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_urlPathLogin",
+        "in_logConnectionError"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CheckCredentials.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "urlStatus&Sequence_2",
+        "username&Sequence_2",
+        "password&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_logCredentialError",
+        "in_logConnectionError",
+        "in_urlPathLogin"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ReadEssentialPaths.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "pathExists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_configFile",
+        "in_pathConfig"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
