@@ -102,7 +102,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="222,119" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
-        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="644,3367" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="644,3365" sap2010:WorkflowViewState.IdRef="TryCatch_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,14 +110,14 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch.Try>
-            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="606,2559" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="606,2558" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="544,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="544,81" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:Exception">
                     <CSharpReference x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">SystemException</CSharpReference>
@@ -295,10 +295,10 @@
             </Sequence>
           </TryCatch.Try>
           <TryCatch.Catches>
-            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="610,193" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="610,192" sap2010:WorkflowViewState.IdRef="Catch`1_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -306,7 +306,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                 </ActivityAction.Argument>
-                <Assign sap2010:Annotation.AnnotationText="Failures during the initialization are considered system exceptions and lead to the End Process state, thus finalizing the execution." DisplayName="Assign SystemException" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign sap2010:Annotation.AnnotationText="Failures during the initialization are considered system exceptions and lead to the End Process state, thus finalizing the execution." DisplayName="Assign SystemException" sap:VirtualizedContainerService.HintSize="434,123" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s:Exception">
                       <CSharpReference x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">SystemException</CSharpReference>
@@ -376,11 +376,11 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <State.Transitions>
-        <Transition DisplayName="Max Retries" sap:VirtualizedContainerService.HintSize="553,2079" sap2010:WorkflowViewState.IdRef="Transition_15">
+        <Transition DisplayName="Max Retries" sap:VirtualizedContainerService.HintSize="553,2076" sap2010:WorkflowViewState.IdRef="Transition_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:PointCollection x:Key="ConnectorLocation">371.1,130 371.1,169.04 98.80000000000001,169.04 98.80000000000001,218.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">371.1,130 371.1,160 98.80000000000001,160 98.80000000000001,218.5</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
             </scg:Dictionary>
@@ -491,7 +491,7 @@
             </ui:LogMessage>
           </Transition.Action>
           <Transition.Condition>
-            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_147">retryProcess &gt;= 3</CSharpValue>
+            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_154">retryProcess &gt; 3</CSharpValue>
           </Transition.Condition>
         </Transition>
         <Transition DisplayName="Successful" sap:VirtualizedContainerService.HintSize="553,2080" sap2010:WorkflowViewState.IdRef="Transition_6">
@@ -646,40 +646,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <State.Transitions>
-                <Transition DisplayName="Max Retries" sap:VirtualizedContainerService.HintSize="553,1295" sap2010:WorkflowViewState.IdRef="Transition_14">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">360,322.5 360,352.5 116.4,352.5 116.4,322.5</av:PointCollection>
-                      <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                      <x:Int32 x:Key="DestConnectionPointIndex">51</x:Int32>
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Transition.To>
-                    <x:Reference>__ReferenceID0</x:Reference>
-                  </Transition.To>
-                  <Transition.Action>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_20">
-                      <ui:LogMessage.Level>
-                        <InArgument x:TypeArguments="ui:LogLevel">
-                          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
-                        </InArgument>
-                      </ui:LogMessage.Level>
-                      <ui:LogMessage.Message>
-                        <InArgument x:TypeArguments="x:Object">
-                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107" xml:space="preserve">"retryProcess: "  + retryProcess</CSharpValue>
-                        </InArgument>
-                      </ui:LogMessage.Message>
-                    </ui:LogMessage>
-                  </Transition.Action>
-                  <Transition.Condition>
-                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_148">retryProcess &gt;=3</CSharpValue>
-                  </Transition.Condition>
-                </Transition>
                 <Transition sap2010:Annotation.AnnotationText="This is a simple mecanism to stop the process.&#xA;In reallife scenario you can stop the process when there is no more data to process or on a schedule." DisplayName="No Data" sap:VirtualizedContainerService.HintSize="553,1352" sap2010:WorkflowViewState.IdRef="Transition_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">360,322.5 360,370.03999999999996 72.4,370.03999999999996 72.4,322.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">360,322.5 360,352.5 72.4,352.5 72.4,322.5</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">31</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -714,13 +684,13 @@
                   <Transition.To>
                     <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="232,179" sap2010:WorkflowViewState.IdRef="State_1">
                       <State.Entry>
-                        <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="540,2265" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="540,3204" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                           <TryCatch.Try>
-                            <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="500,1020" sap2010:WorkflowViewState.IdRef="Sequence_6">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <Assign DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="438,82" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -1040,14 +1010,13 @@
                                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">dtExceptions</CSharpReference>
                                   </InOutArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_codeException">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">SystemException.Message.Substring(0,4)</CSharpValue>
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_151">SystemException.Message.Substring(0,6)</CSharpValue>
                                   </InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_logMessage">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_143">SystemException.Message.Substring(6)</CSharpValue>
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_150">SystemException.Message.Substring(8)</CSharpValue>
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSystemException">True</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_itemTransaction">
-                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSystemException">
+                                    <Literal x:TypeArguments="x:Boolean" Value="True" />
                                   </InArgument>
                                   <InOutArgument x:TypeArguments="x:Int32" x:Key="io_retryProcess">
                                     <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_50">retryProcess</CSharpReference>
@@ -1105,14 +1074,13 @@
                                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_52">dtExceptions</CSharpReference>
                                   </InOutArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_codeException">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">BusinessException.Message.Substring(0,4)</CSharpValue>
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_153">BusinessException.Message.Substring(0,6)</CSharpValue>
                                   </InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_logMessage">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_146">BusinessException.Message.Substring(6)</CSharpValue>
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_152">BusinessException.Message.Substring(8)</CSharpValue>
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSystemException">False</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_itemTransaction">
-                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSystemException">
+                                    <Literal x:TypeArguments="x:Boolean" />
                                   </InArgument>
                                   <InOutArgument x:TypeArguments="x:Int32" x:Key="io_retryProcess">
                                     <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_53">retryProcess</CSharpReference>
@@ -1207,9 +1175,6 @@
                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_137">SystemException.Message.Substring(8)</CSharpValue>
                   </InArgument>
                   <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSystemException">True</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_itemTransaction">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
                   <InOutArgument x:TypeArguments="x:Int32" x:Key="io_retryProcess">
                     <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_46">retryProcess</CSharpReference>
                   </InOutArgument>
@@ -1230,7 +1195,7 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:PointCollection x:Key="ConnectorLocation">371.1,130 371.1,143.04 63.60000000000001,143.04 63.60000000000001,218.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">371.1,130 371.1,142.27334915538185 63.60000000000001,142.27334915538185 63.60000000000001,218.5</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">26</x:Int32>
             </scg:Dictionary>
@@ -1261,9 +1226,6 @@
                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_140">BusinessException.Message.Substring(8)</CSharpValue>
                   </InArgument>
                   <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSystemException">False</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_itemTransaction">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
                   <InOutArgument x:TypeArguments="x:Int32" x:Key="io_retryProcess">
                     <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_48">retryProcess</CSharpReference>
                   </InOutArgument>

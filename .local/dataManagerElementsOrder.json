@@ -135,16 +135,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "OpenBrowser.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [
-        "in_urlPath"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Login.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
@@ -173,7 +163,6 @@
         "codeVendor&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_codeVendor",
         "in_rowException",
         "in_mail"
       ],
@@ -346,7 +335,6 @@
       ],
       "ArgumentsSectionElementsOrder": [
         "in_pathLogsDispatcher",
-        "in_codeVendor",
         "in_log"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -372,7 +360,6 @@
         "rowException&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_itemTransaction",
         "io_retryProcess",
         "in_isSystemException",
         "in_logMessage",
@@ -439,9 +426,7 @@
     {
       "Path": "ReadEssentialPaths.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "pathExists&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "out_configFile",
         "in_pathConfig"

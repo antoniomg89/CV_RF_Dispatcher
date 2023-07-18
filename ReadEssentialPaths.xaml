@@ -82,33 +82,12 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1. Comprobar que existe el archivo con la ruta del fichero Config.xlsx (\Data\config_path.txt)&#xD;&#xA;2. Comprobar que existe el archivo Config.xlsx" DisplayName="ReadEssentialPaths" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Name="pathExists" />
-    </Sequence.Variables>
+  <Sequence DisplayName="ReadEssentialPaths" sap:VirtualizedContainerService.HintSize="450,233" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:FileExistsX sap2010:Annotation.AnnotationText="Obtener si existe el archivo con la ruta  de la configuración" DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
-      <ui:FileExistsX.Exists>
-        <OutArgument x:TypeArguments="x:Boolean">
-          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">pathExists</CSharpReference>
-        </OutArgument>
-      </ui:FileExistsX.Exists>
-      <ui:FileExistsX.Path>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_pathConfig</CSharpValue>
-        </InArgument>
-      </ui:FileExistsX.Path>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:FileExistsX>
     <ui:ReadTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Leer fichero con la ruta del Config.xslx (config_path.txt)" DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
       <ui:ReadTextFile.Content>
         <OutArgument x:TypeArguments="x:String">

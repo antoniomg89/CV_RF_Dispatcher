@@ -5,7 +5,6 @@
     <x:Property Name="in_codeException" Type="InArgument(x:String)" />
     <x:Property Name="in_logMessage" Type="InArgument(x:String)" />
     <x:Property Name="in_isSystemException" Type="InArgument(x:Boolean)" />
-    <x:Property Name="in_itemTransaction" Type="InArgument(x:String)" />
     <x:Property Name="io_retryProcess" Type="InOutArgument(x:Int32)" />
   </x:Members>
   <this:HandleExceptions.in_codeException>
@@ -195,9 +194,6 @@
               <InArgument x:TypeArguments="x:String" x:Key="in_log">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17" xml:space="preserve">"Business exception (" + in_codeException + "): " +  in_logMessage</CSharpValue>
               </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_codeVendor">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">in_itemTransaction</CSharpValue>
-              </InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_pathLogsDispatcher">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">in_Config["pathLogsDispatcher"].ToString()</CSharpValue>
               </InArgument>
@@ -234,9 +230,6 @@
               <InArgument x:TypeArguments="sd:DataRow" x:Key="in_rowException">
                 <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">rowException</CSharpValue>
               </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_codeVendor">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">in_itemTransaction</CSharpValue>
-              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
@@ -253,9 +246,6 @@
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_log">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21" xml:space="preserve">"System exception (" + in_codeException + "): " +  in_logMessage</CSharpValue>
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_codeVendor">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">in_itemTransaction</CSharpValue>
               </InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_pathLogsDispatcher">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">in_Config["pathLogsDispatcher"].ToString()</CSharpValue>

@@ -238,9 +238,6 @@
                             <InArgument x:TypeArguments="x:String" x:Key="in_log">
                               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26" xml:space="preserve">CurrentRow["Vendor code"].ToString() + in_logStoredData + "  "</CSharpValue>
                             </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_codeVendor">
-                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">CurrentRow["Vendor code"].ToString()</CSharpValue>
-                            </InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_pathLogsDispatcher">
                               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">in_pathLogsDispatcher</CSharpValue>
                             </InArgument>

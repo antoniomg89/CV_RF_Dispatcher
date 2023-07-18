@@ -2,7 +2,6 @@
   <x:Members>
     <x:Property Name="in_mail" Type="InArgument(x:String)" />
     <x:Property Name="in_rowException" Type="InArgument(sd:DataRow)" />
-    <x:Property Name="in_codeVendor" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>1524,641</sap:VirtualizedContainerService.HintSize>
@@ -126,7 +125,7 @@
     <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Enviar un correo con información  del proceso y del error" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal">
       <ui:SendOutlookMail.Body>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9" xml:space="preserve">processName + jobInfo.ProcessName + "\n" +processVersion + jobInfo.ProcessVersion + "\n" + workFlowName + jobInfo.WorkflowName + "\n" + codeVendor +  in_codeVendor + "\n" + "---------------------------" + "\n" + in_rowException.Field&lt;String&gt;("Message")</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">processName + jobInfo.ProcessName + "\n" +processVersion + jobInfo.ProcessVersion + "\n" + workFlowName + jobInfo.WorkflowName + "\n" + "---------------------------" + "\n" + in_rowException.Field&lt;String&gt;("Message")</CSharpValue>
         </InArgument>
       </ui:SendOutlookMail.Body>
       <ui:SendOutlookMail.Files>

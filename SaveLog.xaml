@@ -1,7 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="SaveLog" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_log" Type="InArgument(x:String)" />
-    <x:Property Name="in_codeVendor" Type="InArgument(x:String)" />
     <x:Property Name="in_pathLogsDispatcher" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
@@ -141,7 +140,7 @@
     <ui:GetCurrentJobInfo sap2010:Annotation.AnnotationText="Obtener información del proceso" DisplayName="Get Current Job Info" sap:VirtualizedContainerService.HintSize="410,56" sap2010:WorkflowViewState.IdRef="GetCurrentJobInfo_1">
       <ui:GetCurrentJobInfo.Result>
         <OutArgument x:TypeArguments="ui:CurrentJobInfo">
-          <CSharpReference x:TypeArguments="ui:CurrentJobInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">jobInfo</CSharpReference>
+          <CSharpReference x:TypeArguments="ui:CurrentJobInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">jobInfo</CSharpReference>
         </OutArgument>
       </ui:GetCurrentJobInfo.Result>
       <sap:WorkflowViewStateService.ViewState>
@@ -158,7 +157,7 @@
       </ui:AppendLine.FileName>
       <ui:AppendLine.Text>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7" xml:space="preserve">DateTime.Now.ToString("HH:mm:ss") + " ------ " + jobInfo.ProcessName  + " -------- " +in_codeVendor + ":" + in_log</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12" xml:space="preserve">DateTime.Now.ToString("HH:mm:ss") + " ------ " + jobInfo.ProcessName  + " -------- " + in_log</CSharpValue>
         </InArgument>
       </ui:AppendLine.Text>
       <sap:WorkflowViewStateService.ViewState>
