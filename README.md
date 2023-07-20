@@ -1,5 +1,14 @@
-### Documentation is included in the Documentation folder ###
+## CV_RF_Dispatcher
+Proceso el cual hace uso de la plantilla REFramework y automatiza la siguiente tarea:
 
+- Login en ACME.
+- Descargar archivo `Vendors list.xlsx` e insertar sus datos en una cola.
+- Mueve el archivo a una nueva ruta e inserta una nueva columna `Total`.
+- Cerrar sesión en ACME.
+
+---
+
+### Documentation is included in the Documentation folder ###
 
 ### REFrameWork Template ###
 **Robotic Enterprise Framework**
